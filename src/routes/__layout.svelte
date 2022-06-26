@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import "../app.css";
 
   const routes = [
@@ -14,7 +15,7 @@
     <nav class="top-nav">
       {#each routes as route}
       <div class="nav-item">
-        <a href={route.url}>{route.name}</a>
+        <a href='{base}{route.url}'>{route.name}</a>
       </div>  
       {/each}
     </nav>
