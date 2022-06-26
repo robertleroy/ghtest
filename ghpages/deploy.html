@@ -7,13 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/ghtest/_app/immutable/assets/pages/__layout.svelte-c66aca67.css">
+	<link rel="stylesheet" href="/ghtest/_app/immutable/assets/pages/ghpages/__layout.svelte-d0820f53.css">
 	<link rel="modulepreload" href="/ghtest/_app/immutable/start-b1515cd7.js">
 	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/index-e812dee1.js">
 	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/index-757e0073.js">
 	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/paths-396f020f.js">
 	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/__layout.svelte-305c5614.js">
 	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/store-6838026d.js">
-	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/about.svelte-cf532935.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/ghpages/__layout.svelte-2c8c7480.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/ghpages/deploy.md-b4567d7a.js">
 	</head>
 	<body>
 		<div id="svelte">
@@ -27,14 +29,28 @@
       </div><div class="nav-item"><a href="/ghtest/ghpages/">GH-Pages</a>
       </div></nav></div></header>
 
-<main class="svelte-1r2uxxr"><div class="router svelte-1r2uxxr"><h2>About</h2></div>
+<main class="svelte-1r2uxxr"><div class="router svelte-1r2uxxr"><nav class="tabs svelte-1t3o1v3"><a href="/ghtest/ghpages/" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3 current">GH-Pages
+  </div></a><a href="/ghtest/ghpages/svelte_add" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Svelte-Add
+  </div></a><a href="/ghtest/ghpages/init_ghpages" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Init GH-Pages
+  </div></a><a href="/ghtest/ghpages/adapter" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Adapter
+  </div></a><a href="/ghtest/ghpages/deploy" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Build &amp; Deploy
+  </div></a></nav>
+
+<div class="page"><h3>Build &amp; Deploy</h3>
+<pre class="language-sh"><!-- HTML_TAG_START --><code class="language-sh">git add . &amp;&amp; git commit -m &quot;update&quot;
+git push
+
+npm run build 
+npm run deploy
+</code><!-- HTML_TAG_END --></pre>
+</div></div>
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="1f6vp1z">
+		<script type="module" data-sveltekit-hydrate="1yu7tnn">
 		import { start } from "/ghtest/_app/immutable/start-b1515cd7.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1f6vp1z"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1yu7tnn"]').parentNode,
 			paths: {"base":"/ghtest","assets":"/ghtest"},
 			session: {},
 			route: true,
@@ -43,9 +59,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 3],
+				nodes: [0, 2, 6],
 				params: {},
-				routeId: "about"
+				routeId: "ghpages/deploy"
 			}
 		});
 	</script></div>

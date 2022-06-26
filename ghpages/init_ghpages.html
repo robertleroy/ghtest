@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="/ghtest/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content="">
+	<link rel="stylesheet" href="/ghtest/_app/immutable/assets/pages/__layout.svelte-c66aca67.css">
+	<link rel="stylesheet" href="/ghtest/_app/immutable/assets/pages/ghpages/__layout.svelte-d0820f53.css">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/start-b1515cd7.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/index-e812dee1.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/index-757e0073.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/__layout.svelte-305c5614.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/chunks/store-6838026d.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/ghpages/__layout.svelte-2c8c7480.js">
+	<link rel="modulepreload" href="/ghtest/_app/immutable/pages/ghpages/init_ghpages.md-2eb9fa44.js">
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<header class="svelte-1r2uxxr"><div class="flex-header svelte-1r2uxxr"><h1>GhTest</h1>
+
+    <nav class="top-nav svelte-1r2uxxr"><div class="nav-item"><a href="/ghtest/">Home</a>
+      </div><div class="nav-item"><a href="/ghtest/about">About</a>
+      </div><div class="nav-item"><a href="/ghtest/colors">Colors</a>
+      </div><div class="nav-item"><a href="/ghtest/ghpages/">GH-Pages</a>
+      </div></nav></div></header>
+
+<main class="svelte-1r2uxxr"><div class="router svelte-1r2uxxr"><nav class="tabs svelte-1t3o1v3"><a href="/ghtest/ghpages/" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3 current">GH-Pages
+  </div></a><a href="/ghtest/ghpages/svelte_add" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Svelte-Add
+  </div></a><a href="/ghtest/ghpages/init_ghpages" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Init GH-Pages
+  </div></a><a href="/ghtest/ghpages/adapter" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Adapter
+  </div></a><a href="/ghtest/ghpages/deploy" class="svelte-1t3o1v3"><div class="tab svelte-1t3o1v3">Build &amp; Deploy
+  </div></a></nav>
+
+<div class="page"><h4>Install GH-Pages</h4>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> gh-pages --save-dev</code><!-- HTML_TAG_END --></pre>
+<h4>Add gh-pages.js to root</h4>
+<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> publish <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'gh-pages'</span><span class="token punctuation">;</span>
+
+<span class="token function">publish</span><span class="token punctuation">(</span>
+  <span class="token comment">/* ./gh-pages.js */</span>
+ <span class="token string">'build'</span><span class="token punctuation">,</span>
+ <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">branch</span><span class="token operator">:</span> <span class="token string">'gh-pages'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">repo</span><span class="token operator">:</span> <span class="token string">'https://github.com/robertleroy/ghtest'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">dotfiles</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Deploy Complete!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+#### Inintialize git
+<span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token template-punctuation string">&#96;</span></span>&#96; bash
+# push to main branch
+git init
+git add <span class="token punctuation">.</span>
+git commit <span class="token operator">-</span>m <span class="token string">'initial'</span>
+git branch <span class="token operator">-</span><span class="token constant">M</span> main
+git remote add origin https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>robertleroy<span class="token operator">/</span>ghtest<span class="token punctuation">.</span>git
+git push <span class="token operator">-</span>u origin main
+
+# build <span class="token operator">&amp;</span> deploy to gh<span class="token operator">-</span>pages branch
+npm run build
+npm run deploy</code><!-- HTML_TAG_END --></pre>
+</div></div>
+</main>
+
+
+		<script type="module" data-sveltekit-hydrate="133yqur">
+		import { start } from "/ghtest/_app/immutable/start-b1515cd7.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="133yqur"]').parentNode,
+			paths: {"base":"/ghtest","assets":"/ghtest"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 2, 8],
+				params: {},
+				routeId: "ghpages/init_ghpages"
+			}
+		});
+	</script></div>
+	</body>
+</html>
