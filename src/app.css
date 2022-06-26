@@ -1,5 +1,5 @@
 /* Write your global styles here, in PostCSS syntax */
-
+@import '$lib/styles/vs-dark.css';
 
 * {
   box-sizing: border-box;
@@ -16,4 +16,26 @@ html {
 
 .nav-item a:hover:not(:active) {
   opacity: 0.5;
+}
+
+hr {
+  height: 0px;
+  margin: 2rem 0;
+  border: none;
+  border-bottom:  1px solid #ccc;
+}
+
+.page h3 {
+  margin: 1rem 0;
+}
+
+.page h4 {
+  margin: 1rem 0 0;
+}
+
+ol {
+  padding: 0 0 1rem 1rem;
+}
+ol ol {
+  padding: 0.25rem 0 0.5rem 2rem;
 }

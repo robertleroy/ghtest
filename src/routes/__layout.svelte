@@ -1,11 +1,9 @@
 <script>
   import { base } from '$app/paths';
+  import { mainNav } from '$lib/stores/store';
   import "../app.css";
 
-  const routes = [
-    {name: 'Home', url: '/'},
-    {name: 'About', url: '/about'}
-  ]
+  const routes = $mainNav;
 </script>
 
 <header>
